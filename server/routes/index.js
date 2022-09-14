@@ -1,6 +1,7 @@
 import express from "express";
 import {
     viewMoods,
+    getMoodById,
     createMood,
     updateMood,
     deleteMood,
@@ -9,6 +10,7 @@ import {
 const router = express.Router();
 
 router.get('/', viewMoods);
+router.get('/:id', getMoodById);
 router.post('/', createMood);
 router.patch('/:id', updateMood);
 router.delete('/:id', deleteMood);

@@ -9,6 +9,19 @@ export const viewMoods = async (req, res) => {
     }
 }
 
+export const getMoodById = async (req, res) => {
+    try {
+        const mood = await Mood.findAll({
+            where: {
+                id: req.params.id
+            }
+        });
+        res.json(mood[0]);
+    } catch (error) {
+        res.json({ message: error.message });
+    }  
+}
+
 export const createMood = async (req, res) => {
     const mood = req.body;
     const newMood = new Mood(mood);
