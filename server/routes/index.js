@@ -12,7 +12,7 @@ const router = express.Router();
 router.get('/', viewMoods);
 router.get('/:id', getMoodById);
 router.post('/', createMood);
-router.patch('/:id', updateMood);
+router.put('/:id', updateMood);
 router.delete('/:id', deleteMood);
 
 export default router;

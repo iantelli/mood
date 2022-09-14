@@ -13,6 +13,7 @@ const editMood = () => {
         await axios.put(`http://localhost:5000/api/moods/${id}`, {
             input: input,
             rating: rating,
+            updatedAt: new Date().toISOString()
         });
         navigate("/");
     };
