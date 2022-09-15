@@ -10,8 +10,6 @@ const Mood = db.define("moods", {
     rating: {
         type: DataTypes.INTEGER,
     },
-}, {
-    freezeTableName: true,
 });
 
 export default Mood;
