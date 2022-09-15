@@ -10,7 +10,7 @@ const editMood = () => {
 
     const updateMood = async (e: any) => {
         e.preventDefault();
-        await axios.put(`http://localhost:5000/api/moods/${id}`, {
+        await axios.put(`/api/moods/${id}`, {
             input: input,
             rating: rating,
             updatedAt: new Date().toISOString()
@@ -23,7 +23,7 @@ const editMood = () => {
     }, []);
 
     const getMoodById = async () => {
-        const response = await axios.get(`http://localhost:5000/api/moods/${id}`);
+        const response = await axios.get(`/api/moods/${id}`);
         setInput(response.data.input);
         setRating(response.data.rating);
     };

@@ -11,12 +11,12 @@ export default function Mood() {
     }, []);
 
     const getMoods = async () => {
-        const response = await axios.get("http://localhost:5000/api/moods");
+        const response = await axios.get("/api/moods");
         setMood(response.data);
     };
 
     const deleteMood = async (id: number) => {
-        await axios.delete(`http://localhost:5000/api/moods/${id}`);
+        await axios.delete(`/api/moods/${id}`);
         getMoods();
     };
 

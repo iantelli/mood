@@ -13,7 +13,7 @@ const createMood = () => {
             input,
             rating,
         };
-        await axios.post("http://localhost:5000/api/moods", newMood);
+        await axios.post("/api/moods", newMood);
         navigate("/");
     };
 
