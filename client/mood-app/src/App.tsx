@@ -8,7 +8,7 @@ function App() {
 
   return (
     <Router>
-      <h1>My Mood App</h1>
+      <h1>Ian's Mood App</h1>
       <div>
         <Routes>
           <Route path="/" element={<Mood />} />
