@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': 'https://mood-server-production.up.railway.app/'
+      '/api': 'http://localhost:8080',
     }
   }
 })
